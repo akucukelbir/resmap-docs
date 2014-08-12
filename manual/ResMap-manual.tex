@@ -5,7 +5,7 @@
 
 % GEOMETRY
 \usepackage[paper=letterpaper,
-			left=1.5in,               
+			left=1.5in,
 			right=1.5in,
 			top=1.0in,
 			bottom=1.0in,
@@ -17,15 +17,15 @@
 
 % FONTS
 \usepackage[T1]{fontenc}
-\usepackage{garamondx}
-\usepackage[garamondx,cmbraces]{newtxmath}
+% \usepackage{garamondx}
+% \usepackage[garamondx,cmbraces]{newtxmath}
 
 % COLORS
 \usepackage[usenames,dvipsnames,svgnames]{xcolor}
 
 % USEFUL
 \usepackage{microtype}
-\usepackage[parfill]{parskip} 
+\usepackage[parfill]{parskip}
 \usepackage{cleveref}
 \usepackage{graphicx}
 
@@ -41,9 +41,9 @@
 }
 
 
-\title{ResMap Manual\break {\normalsize\texttt{[version 1.1.2]}}}
+\title{\textbf{ResMap Manual}\break {\normalsize\texttt{[version 1.1.5]}}}
 \author{Alp Kucukelbir, Fred Sigworth, Hemant Tagare}
-\date{October 29, 2013}
+\date{August 12, 2014}
 
 \begin{document}
 \maketitle
@@ -51,7 +51,7 @@
 \tableofcontents
 
 \section{Purpose}
-Local Resolution Map (ResMap) is a Python (NumPy/SciPy) application with a Tkinter GUI and a command-line interface. It is a software package for computing the local resolution of 3D density maps studied in structural biology, primarily electron cryo-microscopy (cryo-EM).
+ResMap (Resolution Map) is a Python (NumPy/SciPy) application with a Tkinter GUI and a command-line interface. It is a software package for computing the local resolution of 3D density maps studied in structural biology, primarily electron cryo-microscopy (cryo-EM).
 
 \newpage
 
@@ -81,7 +81,7 @@ You may also download the source files (Python) and run them using your own Pyth
 \end{center}
 
 \section{Launching the Program (Graphical Mode)}
-To run the program in graphical mode, in Windows simply double click the binary, while in Mac and Linux, execute the following command from the terminal 
+To run the program in graphical mode, in Windows simply double click the binary, while in Mac and Linux, execute the following command from the terminal
 \begin{center}
 	\textcolor{NavyBlue}{\texttt{./ResMap-1.1.2-distrib}}
 \end{center}
@@ -97,12 +97,12 @@ You should see a graphical user interface (GUI) show up, as shown in \Cref{fig:g
 \textcolor{RedOrange}{\textbf{NOTE:}} The first time you launch ResMap, it may take a while for the GUI to appear. Subsequent launches of ResMap should not suffer from this delay.
 
 \section{Launching the Program (Command Line Mode)}
-To run the program in command line mode, open a command line prompt or terminal and change your directory to where you downloaded the ResMap binary. The command line interface is presented below. 
+To run the program in command line mode, open a command line prompt or terminal and change your directory to where you downloaded the ResMap binary. The command line interface is presented below.
 
 \medskip
 
 \begin{lstlisting}
-Usage: 
+Usage:
   ResMap.py [(--noguiSingle INPUT)] [--vxSize=VXSIZE]
             [--pVal=PVAL]
             [--minRes=MINRES] [--maxRes=MAXRES] [--stepRes=STEPRES]
@@ -124,15 +124,15 @@ Options:
   --noguiSplit        Run ResMap for Split Volumes in command-line mode
   --vxSize=VXSIZE     Voxel size of input map (A) [default: 0.0]
   --pVal=PVAL         P-value for likelihood ratio test [default: 0.05]
-  --minRes=MINRES     Minimum resolution (A) [default: 0.0]       
-  --maxRes=MAXRES     Maximum resolution (A) [default: 0.0]      
-  --stepRes=STEPRES   Step size (A) [default: 1.0]                
-  --maskVol=MASKVOL   Mask volume                                 
+  --minRes=MINRES     Minimum resolution (A) [default: 0.0]
+  --maxRes=MAXRES     Maximum resolution (A) [default: 0.0]
+  --stepRes=STEPRES   Step size (A) [default: 1.0]
+  --maskVol=MASKVOL   Mask volume
   --vis2D             Output 2D visualization
   --launchChimera     Attempt to launch Chimera after execution
   --noiseDiag         Run and show noise diagnostics
   -h --help           Show this help message and exit
-  --version           Show version. 
+  --version           Show version.
 \end{lstlisting}
 
 \section{Single Volume vs.~Split Volume Mode}
@@ -201,12 +201,12 @@ These fields are provided to accelerate computation if you are only interested i
 This is the p-value of the statistical hypothesis test on which ResMap is based on. It is customarily set to $0.05$ although you are welcome to reduce it (e.g.~$0.01$) if you would like to obtain a more conservative result. Empirically, ResMap results are not much affected by the p-value.
 
 \subsection{Mask Volume}
-It is not necessary to provide ResMap with a mask volume. The algorithm will attempt to estimate a mask volume by low-pass filtering the input volume and thresholding it using a heuristic procedure. 
+It is not necessary to provide ResMap with a mask volume. The algorithm will attempt to estimate a mask volume by low-pass filtering the input volume and thresholding it using a heuristic procedure.
 
 If the automated procedure does not work well for your particle, you may provide a mask volume that matches the input volume in size and format. The mask volume should be a binary volume with zero (0) denoting the background/solvent and some positive value (0+) enveloping the particle.
 
 \section{Using the ResMap Pre-Whitening Interface (Beta)}
-ResMap as of \texttt{[v.1.0.7]} provides an interactive graphical pre-whitening tool (\Cref{fig:prewhitening}). The tool was significantly re-vamped in \texttt{[v.1.1.0]} with many performance updates. 
+ResMap as of \texttt{[v.1.0.7]} provides an interactive graphical pre-whitening tool (\Cref{fig:prewhitening}). The tool was significantly re-vamped in \texttt{[v.1.1.0]} with many performance updates.
 
 Specifically, ResMap now offers two different pre-whitening modes: one for reasonably sized volumes and another for larger volumes. Descriptions are provided in the terminal as ResMap is running. In both modes, the usage, as described below, is the same:
 
@@ -234,7 +234,7 @@ ResMap will attempt to pre-whiten your input volume(s) in the following way:
 \textcolor{RedOrange}{\textbf{NOTE:}} If the pre-whitening causes unexpected problems, simply set the ramp weight to 0. This should effectively by-pass the pre-whitening routine. Please also notify the authors as we would like to make this tool as robust as possible.
 
 \section{Visualizing the Outputs}
-ResMap will output an MRC/CCP4 volume with the same filename as the input volume, but with \texttt{\_resmap.map} appended to the end. In the split volume mode, it will use the filename of the first volume. Resmap will also write out a UCSF Chimera script for 3D visualization with the same filename as the input volume, but with \texttt{\_resmap\_chimera.cmd} at the end. 
+ResMap will output an MRC/CCP4 volume with the same filename as the input volume, but with \texttt{\_resmap.map} appended to the end. In the split volume mode, it will use the filename of the first volume. Resmap will also write out a UCSF Chimera script for 3D visualization with the same filename as the input volume, but with \texttt{\_resmap\_chimera.cmd} at the end.
 
 ResMap now offers two ways of visualizing the results:
 \begin{description}
@@ -242,7 +242,7 @@ ResMap now offers two ways of visualizing the results:
 
 	\textcolor{RedOrange}{\textbf{NOTE:}} You can save the 2D figures in a variety of formats: PNG, TIFF, JPEG, PS, EPS, SVG, PDF, and \LaTeX{} PGF.
 
-	\item[3D:] ResMap now, thanks to the help of Tom Goddard from the Chimera team, outputs a Chimera script along with the resolution map. ResMap offers an option to automatically launch this script into Chimera after ResMap has finished its computations. The script makes use of Chimera's \texttt{Tools > Volume Data > Surface Color}\footnote{http://www.cgl.ucsf.edu/chimera/docs/ContributedSoftware/surfcolor/surfcolor.html} to color the surface of your input map with the results of ResMap, and animate a slice as it goes through a low-pass filtered contour of the input volume. 
+	\item[3D:] ResMap now, thanks to the help of Tom Goddard from the Chimera team, outputs a Chimera script along with the resolution map. ResMap offers an option to automatically launch this script into Chimera after ResMap has finished its computations. The script makes use of Chimera's \texttt{Tools > Volume Data > Surface Color}\footnote{http://www.cgl.ucsf.edu/chimera/docs/ContributedSoftware/surfcolor/surfcolor.html} to color the surface of your input map with the results of ResMap, and animate a slice as it goes through a low-pass filtered contour of the input volume.
 \end{description}
 
 \begin{figure}[!h]
@@ -262,7 +262,7 @@ ResMap now offers two ways of visualizing the results:
 
 \textcolor{RedOrange}{\emph{The binary does not work!}}
 \begin{quote}
-	Please contact the authors. If you are willing, please consider installing Python and the dependencies noted in \Cref{downloadAndInstall} and running ResMap from the source. 
+	Please contact the authors. If you are willing, please consider installing Python and the dependencies noted in \Cref{downloadAndInstall} and running ResMap from the source.
 \end{quote}
 
 \textcolor{RedOrange}{\emph{The results are over-/under-estimating the resolution!}}
@@ -279,7 +279,7 @@ ResMap now offers two ways of visualizing the results:
 If you use ResMap, we kindly ask that you use the following citation:
 
 \begin{quote}
-	A.~Kucukelbir, F.J.~Sigworth, H.D.~Tagare, \textcolor{BrickRed}{Quantifying the Local Resolution of Cryo-EM Density Maps}, \textcolor{OliveGreen}{\emph{Nature Methods}}, In Press 2013.
+	A.~Kucukelbir, F.J.~Sigworth, H.D.~Tagare, \textcolor{BrickRed}{Quantifying the Local Resolution of Cryo-EM Density Maps}, \textcolor{OliveGreen}{\emph{Nature Methods}}, Volume 11, Issue 1, Pages 63-65, 2014.
 \end{quote}
 
 \section{Changelog}
