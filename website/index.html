@@ -15,6 +15,9 @@
     <!-- Custom styles for this template -->
     <link href="resmap.css" rel="stylesheet">
 
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600' rel='stylesheet' type='text/css'>
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
@@ -71,26 +74,41 @@
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-md-4">
           <img class="img-circle" src="img/windows.png" alt="Generic placeholder image">
           <h2>Windows</h2>
-          <p>Requires 64bit version. <br> Tested on Windows 7 and 8.</p>
+          <p>Requires 64bit architecture. <br> Tested on Windows 7+.</p>
           <p><a class="btn btn-success" href="http://sourceforge.net/projects/resmap/files/latest/download">Download</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        </div><!-- /.col-md-4 -->
+        <div class="col-md-4">
           <img class="img-circle" src="img/mac.png" alt="Generic placeholder image">
           <h2>Mac</h2>
-          <p>Requires Mac OS X 10.6+. <br> Tested on 10.7 and 10.8.</p>
+          <p>Requires Mac OS X 10.6+. <br> Tested on 10.7+.</p>
           <p><a class="btn btn-success" href="http://sourceforge.net/projects/resmap/files/latest/download">Download</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        </div><!-- /.col-md-4 -->
+        <div class="col-md-4">
           <img class="img-circle" src="img/linux.png" alt="Generic placeholder image">
           <h2>Linux</h2>
-          <p>Requires 64bit version. <br> Tested on Fedora 14 and CentOS 6.</p>
+          <p>Requires 64bit architecture. <br> Works on Fedora14, CentOS6, and Ubuntu 12.04.</p>
           <p><a class="btn btn-success" href="http://sourceforge.net/projects/resmap/files/latest/download">Download</a></p>
-          <p class="text-muted">Your distribution not supported? <br> Grab the <a href="http://sourceforge.net/projects/resmap/files/ResMap-1.0.8-src.zip/download">source code</a>.</p>
-        </div><!-- /.col-lg-4 -->
+          <p class="text-muted">Your distribution not supported? <br> Grab the <a href="http://sourceforge.net/projects/resmap/files/src">source code</a>.</p>
+        </div><!-- /.col-md-4 -->
       </div><!-- /.row -->
+
+      <div id="manual" class="row featurette">
+        <div  class="col-md-12">
+          <div class="panel panel-danger">
+            <div class="panel-heading">
+              <h2 class="panel-title">Manual</h2>
+            </div>
+            <div class="panel-body">
+              <br />
+              <p class="lead">Please read the manual for installation and usage instructions. <a class="btn btn-danger btn-lg" href="/files/ResMap-manual.pdf">Download manual</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
 
       <!-- START THE FEATURETTES -->
@@ -135,23 +153,6 @@
 
       <!-- /END THE FEATURETTES -->
 
-      <div id="manual" class="row featurette">
-        <div  class="col-md-12">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h2 class="panel-title">Manual</h2>
-            </div>
-            <div class="panel-body">
-              <blockquote>
-              <p>Please download the manual (PDF) <a href="/files/ResMap-manual.pdf">here</a>.</p>
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
       <div id="citing" class="row featurette">
         <div  class="col-md-12">
           <div class="panel panel-success">
@@ -163,8 +164,9 @@
             <blockquote>
               <p>If you find ResMap useful in your work, please consider citing us: <br><br></p>
               <p>
-              A. Kucukelbir, F.J. Sigworth, and H.D. Tagare, <span class="text-danger">The Local Resolution of Cryo-EM Density Maps</span>, In Review, 2013.
+              <strong>A. Kucukelbir, F.J. Sigworth, and H.D. Tagare, <font class ="text-danger">Quantifying the Local Resolution of Cryo-EM Density Maps</font>, <i class="text-success">Nature Methods</i>. Volume 11, Issue 1, Pages 63-65, 2014.</strong><br><br>
               </p>
+              <p>You may read the paper here: <a href="http://dx.doi.org/10.1038/nmeth.2727">http://dx.doi.org/10.1038/nmeth.2727</a></p>
             </blockquote>
 
             </div>
@@ -182,8 +184,8 @@
             </div>
             <div class="panel-body">
             <blockquote>
-              <p><b>For questions about the software and bug reports:</b> alp.kucukelbir [at] yale.edu</p>
-              <p><b>For general questions:</b> {alp.kucukelbir, fred.sigworth, hemant.tagare} [at] yale.edu</p>
+              <p><b>For questions about the software and bug reports:</b> <a href="mailto:alpk@aya.yale.edu">alpk@aya.yale.edu</a></p>
+              <p><b>For general questions:</b> <a href="mailto:alpk@aya.yale.edu">alpk@aya.yale.edu</a> or {fred.sigworth, hemant.tagare} [at] yale.edu</p>
 
             </blockquote>
             </div>
@@ -196,7 +198,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2013 <a href="http://proditus.com/">Alp Kucukelbir</a> &middot; ResMap is licenced under the <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs CC BY-NC-ND License</a></p>
+        <p>&copy; 2014 <a href="http://proditus.com/">Alp Kucukelbir</a> &middot; ResMap is licenced under the <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs CC BY-NC-ND License</a></p>
       </footer>
 
     </div><!-- /.container -->
