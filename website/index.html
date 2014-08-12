@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ResMap (Resolution Map)</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Custom styles for this template -->
+    <link href="resmap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43745101-1', 'sourceforge.net');
+  ga('send', 'pageview');
+
+  </script>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">ResMap (Resolution Map)</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#manual">Manual</a></li>
+            <li><a href="#citing">Citing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="jumbotron">
+        <h1>ResMap</h1>
+        <p class="lead">ResMap (Resolution Map) is a Python (NumPy/SciPy) application with a Tkinter GUI. It is an easy to use software package for computing the local resolution of 3D density maps studied in structural biology, primarily electron cryo-microscopy (cryo-EM).</p>
+<!--         <p><a class="btn btn-lg btn-success" href="#">Sign up today</a></p> -->
+      </div>
+
+<!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="img/windows.png" alt="Generic placeholder image">
+          <h2>Windows</h2>
+          <p>Requires 64bit version. <br> Tested on Windows 7 and 8.</p>
+          <p><a class="btn btn-success" href="http://sourceforge.net/projects/resmap/files/latest/download">Download</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="img/mac.png" alt="Generic placeholder image">
+          <h2>Mac</h2>
+          <p>Requires Mac OS X 10.6+. <br> Tested on 10.7 and 10.8.</p>
+          <p><a class="btn btn-success" href="http://sourceforge.net/projects/resmap/files/latest/download">Download</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="img/linux.png" alt="Generic placeholder image">
+          <h2>Linux</h2>
+          <p>Requires 64bit version. <br> Tested on Fedora 14 and CentOS 6.</p>
+          <p><a class="btn btn-success" href="http://sourceforge.net/projects/resmap/files/latest/download">Download</a></p>
+          <p class="text-muted">Your distribution not supported? <br> Grab the <a href="http://sourceforge.net/projects/resmap/files/ResMap-1.0.8-src.zip/download">source code</a>.</p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Simple interface. <span class="text-muted">Cross-platform GUI.</span></h2>
+          <p class="lead">ResMap provides a clear graphical interface. You can easily load your 3D density map (MRC format) and input your voxel spacing. Optional inputs are provided and explained right in the same window.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="img/gui.png" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="img/viz.png" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Visualization? <span class="text-muted"> Your choice of 2D, 3D, or both.</span></h2>
+          <p class="lead">ResMap outputs a 3D volume the same size of your input volume. You can immediately see the results with in-house 2D visualizations. If you have <a href="http://www.cgl.ucsf.edu/chimera/">UCSF Chimera</a> installed, ResMap can also animate the result in Chimera. (Thanks, <a href="http://sonic.net/~goddard/home/">Tom</a>!) </p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Prefer the command line? <span class="text-muted">We have that covered, too.</span></h2>
+          <p class="lead">The exact same functionality can be accessed via the command line. This is useful if you want to batch process many volumes.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="img/cmdline.png" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+      <div id="manual" class="row featurette">
+        <div  class="col-md-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h2 class="panel-title">Manual</h2>
+            </div>
+            <div class="panel-body">
+              <blockquote>
+              <p>Please download the manual (PDF) <a href="/files/ResMap-manual.pdf">here</a>.</p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div id="citing" class="row featurette">
+        <div  class="col-md-12">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h2 class="panel-title">Citing</h2>
+            </div>
+            <div class="panel-body">
+
+            <blockquote>
+              <p>If you find ResMap useful in your work, please consider citing us: <br><br></p>
+              <p>
+              A. Kucukelbir, F.J. Sigworth, and H.D. Tagare, <span class="text-danger">The Local Resolution of Cryo-EM Density Maps</span>, In Review, 2013.
+              </p>
+            </blockquote>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div id="contact"  class="row featurette">
+        <div class="col-md-12">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h2 class="panel-title">Contact</h2>
+            </div>
+            <div class="panel-body">
+            <blockquote>
+              <p><b>For questions about the software and bug reports:</b> alp.kucukelbir [at] yale.edu</p>
+              <p><b>For general questions:</b> {alp.kucukelbir, fred.sigworth, hemant.tagare} [at] yale.edu</p>
+
+            </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2013 <a href="http://proditus.com/">Alp Kucukelbir</a> &middot; ResMap is licenced under the <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs CC BY-NC-ND License</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
